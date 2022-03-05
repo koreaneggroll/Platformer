@@ -27,7 +27,7 @@ class Player
 
 
         //Functions
-
+        void updateMovement();
         void update();
         void render(sf::RenderTarget& target);
 };

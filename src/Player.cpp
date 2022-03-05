@@ -65,6 +65,37 @@ Player::~Player()
 
 //Other functions
 
+
+void Player::updateMovement()
+{
+    /*
+        @return void
+
+        part of the Player class
+
+        updates the players movement
+    */
+
+   if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A)) //left
+   {
+       sprite.move(-0.7f, 0.f);
+   }
+   else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D)) //right
+   {
+       sprite.move(0.7f, 0.f);
+   }
+
+   else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W)) //top
+   {
+       sprite.move(0.f, -0.7f);
+   }
+   else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S)) //down
+   {
+       sprite.move(0.f, 0.7f);
+   }
+}
+
+
 void Player::update()
 {
     /*
@@ -74,6 +105,8 @@ void Player::update()
 
         updates the player
     */
+
+   updateMovement();
 }
 
 

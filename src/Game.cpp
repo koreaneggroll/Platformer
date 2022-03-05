@@ -121,6 +121,8 @@ void Game::update()
             window.close();
         }
     }
+
+    updatePlayer();
 }
 
 
