@@ -33,7 +33,20 @@ Game::~Game()
 
 void Game::update()
 {
-    std::cout << "Works till now" << std::endl;
+    //Polling window ev
+
+    while(window.pollEvent(event))
+    {
+        if(event.type == sf::Event::Closed)
+        {
+            window.close();
+        }
+
+        else if(event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
+        {
+            window.close();
+        }
+    }
 }
 
 
