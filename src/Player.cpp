@@ -36,11 +36,11 @@ Player::~Player()
 
 void Player::update()
 {
-
+    
 }
 
 
 void Player::render(sf::RenderTarget& target)
 {
-
+    target.draw(sprite);
 }
