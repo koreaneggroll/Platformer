@@ -52,7 +52,11 @@ void Game::update()
 
 void Game::render()
 {
+    window.clear();
 
+    //Render game here
+
+    window.display();
 }
 
 
