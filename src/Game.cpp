@@ -18,7 +18,7 @@ void Game::initWin()
     
     */
 
-    window.create(sf::VideoMode::getDesktopMode(), "Platformer", sf::Style::Close | sf::Style::Titlebar);
+    window.create(sf::VideoMode(this->vidMode_width, this->vidMode_height), "Platformer", sf::Style::Close | sf::Style::Titlebar);
 }
 
 
@@ -124,6 +124,21 @@ void Game::update()
 }
 
 
+
+void Game::renderPlayer()
+{
+    /*
+        @return void
+
+        part of Game class
+
+        updates the player object
+    */
+
+   player->render(window);
+}
+
+
 //Renders the game
 void Game::render()
 {
@@ -141,6 +156,7 @@ void Game::render()
     window.clear();
 
     //Render game here
+    renderPlayer();
 
 
     //displays what we have to the screen

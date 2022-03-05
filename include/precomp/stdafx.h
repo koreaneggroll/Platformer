@@ -3,9 +3,13 @@
 #include <vector>
 #include <ctime>
 #include <cstdlib>
-#include <time.h>
 #include <vector>
 #include <algorithm>
+
+
+#include <time.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 
 //Sfml includes

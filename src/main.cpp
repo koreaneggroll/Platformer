@@ -4,7 +4,7 @@
 int main()
 {
     //srand time takes as seed the curretn time
-    srand(time(static_cast<unsigned>(0)));
+    srand(static_cast<unsigned>(time(0)));
 
     //creates a game instance
     Game game;

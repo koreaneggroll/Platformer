@@ -8,6 +8,12 @@
 
 class Game
 {
+
+    //Static Variables
+    private:
+        static const unsigned short vidMode_width = 1280;
+        static const unsigned short vidMode_height = 720;
+
     //Variables
     private:
         sf::RenderWindow window;
@@ -27,6 +33,7 @@ class Game
         //functions
         void updatePlayer();
         void update();
+        void renderPlayer();
         void render();
         const sf::RenderWindow & getWindow() const;
 };

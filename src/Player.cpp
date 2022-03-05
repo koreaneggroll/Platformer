@@ -13,6 +13,12 @@ void Player::initTexture()
 
         initializes the players textures
     */
+
+   if(!textureSheet.loadFromFile("./src/textures/player_sheet.png"))
+   {
+       printf("ERROR: Player class could not load texture sheet!\n");
+       exit(1);
+   }
 }
 
 
@@ -25,6 +31,8 @@ void Player::initSprite()
 
         initializes the players sprite
     */
+
+   sprite.setTexture(textureSheet);
 }
 
 
