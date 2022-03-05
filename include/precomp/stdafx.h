@@ -2,6 +2,10 @@
 #include <iostream>
 #include <vector>
 #include <ctime>
+#include <cstdlib>
+#include <time.h>
+#include <vector>
+#include <algorithm>
 
 
 //Sfml includes

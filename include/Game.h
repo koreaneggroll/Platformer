@@ -2,13 +2,13 @@
 #define GAME_H
 
 
-#include "../precomp/stdafx.h"
+#include "./precomp/stdafx.h"
 
 
 class Game
 {
     private:
-    
+
 
     public:
         Game();
