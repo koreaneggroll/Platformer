@@ -8,6 +8,16 @@
 //Inits the game window
 void Game::initWin()
 {
+
+    /*
+        @return void
+
+        part of the Game class
+
+        inits the game window object
+    
+    */
+
     window.create(sf::VideoMode::getDesktopMode(), "Platformer", sf::Style::Close | sf::Style::Titlebar);
 }
 
@@ -15,6 +25,14 @@ void Game::initWin()
 //Inits the player
 void Game::initPlayer()
 {
+    /*
+        @return void
+
+        part of Game class
+
+        inits the player object
+        
+    */
     player = new Player();
 }
 
@@ -23,13 +41,30 @@ void Game::initPlayer()
 //Public functions
 Game::Game()
 {
+    /*
+        @return none
+
+        Constructor for Game class
+    */
+
+    //initializes the window
     initWin();
+    //initializes the player
     initPlayer();
 }
 
 
 Game::~Game()
 {
+    /*
+        @return none
+
+        Destructor for Game class
+    */
+
+
+   //deletes the objects
+
     delete player;
 }
 
@@ -43,6 +78,16 @@ Game::~Game()
 void Game::updatePlayer()
 {
 
+    /*
+        @return void
+
+        Part of Game class
+
+        updates the player object every frame
+        
+    */
+
+    player->update();
 }
 
 
@@ -52,6 +97,8 @@ void Game::update()
 
     /*
         @return void
+
+        part of Game class
         
         updates the game every frame
     */
@@ -63,12 +110,14 @@ void Game::update()
         //If the X button is pressed the window closes
         if(event.type == sf::Event::Closed)
         {
+            //closes window
             window.close();
         }
 
         //If the user pressed ESCAPE we close the program
         else if(event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
         {
+            //closes window
             window.close();
         }
     }
@@ -82,19 +131,36 @@ void Game::render()
     /*
         @return void
 
+        part of Game class
+
         renders the whole game
     
     */
 
+   //clears the screen
     window.clear();
 
     //Render game here
 
+
+    //displays what we have to the screen
     window.display();
 }
 
 
 const sf::RenderWindow &Game::getWindow() const
 {
+
+    /*
+        @return sf::RenderWindow&
+
+        const
+
+        part of Game class
+
+        returns the window variable from the class;
+    
+    */
+
     return window;
 }
